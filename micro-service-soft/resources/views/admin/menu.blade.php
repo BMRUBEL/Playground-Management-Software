@@ -326,13 +326,25 @@
 
 
         <li class="nav-item">
-          <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-regular fa-user"></i>
-            <p>
-              Logout
+           
+            
 
-            </p>
-          </a>
+            <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                             <a :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();"  class="nav-link">
+                              <i class="nav-icon fas fa-regular fa-user"></i>
+                                {{-- {{ __('Log Out') }} --}}
+
+                                
+                          
+
+              </form>
+            <p>
+           Log Out
+             </p>
+           </a>
         </li>
 
       </ul>
